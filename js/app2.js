@@ -10,8 +10,8 @@ const app = Vue.createApp({
     },
     data() {
         return {
-            apiUrl: 'https://vue3-course-api.hexschool.io/v2',
-            path: 'popeye',
+            // apiUrl: 'https://vue3-course-api.hexschool.io/v2',
+            // path: 'popeye',
             user: {
                 email: '',
                 name: '',
@@ -104,7 +104,7 @@ const app = Vue.createApp({
             this.isLoadingItem = '';
             axios.delete(url)
                 .then(res => {
-                    console.log(res);
+                    // console.log(res);
                     this.getCart();
                 })
                 .catch(err => {
@@ -120,7 +120,7 @@ const app = Vue.createApp({
             const url = `${apiUrl}/api/${path}/cart/${item.id}`;
             axios.put(url, { data })
                 .then(res => {
-                    console.log(res);
+                    // console.log(res);
                     this.getCart();
                     this.isLoadingItem = '';
                 })

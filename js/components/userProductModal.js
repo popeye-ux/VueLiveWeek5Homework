@@ -18,7 +18,7 @@ export default {
             const url = `${this.apiUrl}/api/${this.path}/product/${this.id}`;
             axios.get(url)
                 .then(res => {
-                    console.log(res);
+                    // console.log(res);
                     this.productDetail = res.data.product;
                 })
                 .catch(err => {
